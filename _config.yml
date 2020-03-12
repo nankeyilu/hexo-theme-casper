@@ -65,8 +65,8 @@ comment: false
 valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  appId: # your leancloud application appid
-  appKey: # your leancloud application appkey
+  appId: 2YTtGBClfFU6JoO8D95qlCJq-MdYXbMMI # your leancloud application appid
+  appKey: VCyC8V6cmFNCRzgPoD0K7vpt # your leancloud application appkey
   placeholder: Just go go # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
@@ -77,7 +77,7 @@ valine:
 manifest: false
 service_workers: false
 
-navColor: '3c484e'
+navColor: '57c5c1'
 
 # Baidu Push
 baidu: false
