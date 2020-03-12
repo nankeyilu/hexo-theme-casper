@@ -66,7 +66,7 @@
 	<meta property="og:type" content="{% if is_post() %}article{% else %}blog{% endif %}">
 	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
   <meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
-	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}https://i.loli.net/2020/03/12/XV79IRm25d4zwUA.png{% endif %}" />
+	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ config.blog_preview_image }}{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
 
 	{% if is_post() %}
