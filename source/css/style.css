@@ -12,20 +12,7 @@ img[mode="aspectFill"] {
 }
 
 .leancloud-visitors {
-    position: relative;
-    margin-left: 20px
-}
-
-.leancloud-visitors:before {
-    position: absolute;
-    top: 11px;
-    left: -11px;
-    display: block;
-    width: 2px;
-    height: 2px;
-    content: "";
-    border-radius: 100%;
-    background: var(--white-normal);
+    font-size: 1.5rem;
 }
 
 .search-result-list {

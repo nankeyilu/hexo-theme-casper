@@ -24,6 +24,15 @@
             <div class="post-full-content">
                 <article id="photoswipe" class="markdown-body">
                     {{ page.content }}
+                    <p class="post-ending">
+                    {{ date(page.date, 'YYYY-MM-D') }} / {{ page.author }}<br>
+					{% if theme.comment and theme.valine.visitor %}
+					<span id="{{ url_for(page.path) }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+						<span>阅读量：</span>
+						<span class="leancloud-visitors-count">0</span>
+					</span>
+	   		 		{% endif %}
+    			</p>
                 </article>
                 <ul class="tags-postTags">
                     {% for tag in page.tags %}
