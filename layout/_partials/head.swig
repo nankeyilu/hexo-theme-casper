@@ -22,23 +22,19 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="preconnect" href="//www.googletagmanager.com">
-	<link rel="preconnect" href="//zz.bdstatic.com">
-	<link rel="preconnect" href="//sp0.baidu.com">
 	<link rel="preconnect" href="//www.google-analytics.com">
-	<link rel="preconnect" href="//cdn1.lncld.net">
-	<link rel="preconnect" href="//unpkg.com">
-	<link rel="preconnect" href="//app-router.leancloud.cn">
-	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
-	<link rel="preconnect" href="//gravatar.loli.net">
+	{% if is_post() %}
+	<link rel="preload" href="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js">
+	<link rel="preconnect" href="//us.avoscloud.com">
+	<link rel="preconnect" href="//js.fundebug.cn">
+	<link rel="dns-prefetch" href="//gravatar.loli.net">
+	{% endif %}
 
 	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 
 	<meta name="HandheldFriendly" content="True" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+	<meta name="viewport" content="width=device-width" />
 	<meta name="generator" content="hexo">
-	<meta name="author" content="{{ config.author }}">
-	<meta name="description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
 
 	{% if theme.keywords %}
 	<meta name="keywords" content="{% if is_post() %}{{ page.keywords }}{% else %}{{ theme.keywords }}{% endif %}">
@@ -63,16 +59,17 @@
 	{% endif %}
 
 	<meta property="og:site_name" content="{{ config.title }}">
-	<meta property="og:type" content="{% if is_post() %}article{% else %}blog{% endif %}">
-	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
-  <meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
+	<meta property="og:type" content="{% if is_post() %}article{% else %}website{% endif %}">
+	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}{% if is_home() %} | {{ config.subtitle }}{% endif %}">
+	<meta property="og:description" name="description" content="{% if is_post() %}{{ page.excerpt }}{% elif description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ config.blog_preview_image }}{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
 
 	{% if is_post() %}
 	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/>
-	<meta property="article:author" content="{{ config.author }}">
+	<meta property="article:author" name="author" content="{{ config.author }}">
 	<meta property="article:published_first" content="{{ config.title }}, {{ url_for(page.path) }}" />
+	<meta name="twitter:card" content="summary_large_image">
 	{% endif %}
 
 	{# {{ css('css/screen') }}

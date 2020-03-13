@@ -61,7 +61,7 @@
 
 {# Valine 评论 #}
 {% if is_post() and theme.comment %}
-<script id="valineScript" src='//unpkg.com/valine/dist/Valine.min.js' async></script>
+<script id="valineScript" src='//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js' async></script>
 <script>
     document.getElementById('valineScript').addEventListener("load", function() {
         new Valine({
