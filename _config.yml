@@ -2,7 +2,7 @@
 rss: /atom.xml           # link
 favicon: /images/favicon.png
 blog_logo:
-header_image: https://i.loli.net/2020/03/11/SviQyI85oFlkKWT.jpg
+header_image: https://cdn.suste.ch/img/nanke-assets/nanke-banner.jpg
 bio: 在这里，读懂南科
 post_toc: true
 
