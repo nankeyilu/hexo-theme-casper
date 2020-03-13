@@ -64,7 +64,7 @@ local_search: true
 comment: true
 valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
+  verify: true # Verification code
   appId: 2YTtGBClfFU6JoO8D95qlCJq-MdYXbMMI # your leancloud application appid
   appKey: VCyC8V6cmFNCRzgPoD0K7vpt # your leancloud application appkey
   placeholder: Just go go # comment box placeholder

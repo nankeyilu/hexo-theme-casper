@@ -7,7 +7,7 @@
 			<a href="{{ config.root }}" title="{{ config.title }}">{{ config.title }} &copy; {{ date(Date.now(), 'YYYY') }}</a>
 			{% if is_post() %}
 				{% if theme.comment and theme.valine.visitor %}
-			        <span hidden="true" id="{{ url_for(page.path) }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+			        <span id="{{ url_for(page.path) }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
 			            <span>阅读量 </span>
 			            <span class="leancloud-visitors-count">0</span>
 			        </span>
