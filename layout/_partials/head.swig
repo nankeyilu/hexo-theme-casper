@@ -24,7 +24,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="preconnect" href="//www.google-analytics.com">
 	{% if is_post() %}
-	<link rel="preload" href="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js">
+	<link rel="preload" href="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js" as="script">
 	<link rel="preconnect" href="//us.avoscloud.com">
 	<link rel="preconnect" href="//js.fundebug.cn">
 	<link rel="dns-prefetch" href="//gravatar.loli.net">
@@ -44,6 +44,10 @@
 	{{ favicon_tag(theme.favicon) }}
 	<link rel="apple-touch-icon" href="{{ theme.favicon }}"/>
 	{% endif %}
+	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-64.png') }}" size="64x64">
+	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-32.png') }}" size="32x32">
+	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-16.png') }}" size="16x16">
+	<link rel="icon" type="image/x-icon" href="{{ url_for('/favicon.ico') }}">
 
 	{% if theme.navColor %}
 	<meta name="theme-color" content="#{{ theme.navColor }}">

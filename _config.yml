@@ -1,6 +1,6 @@
 # Config
 rss: /atom.xml           # link
-favicon: /images/favicon.png
+# favicon: /images/favicon.png # Hexo's favicon_tag lacks the flexibility to supply different sizes of favicon
 blog_logo:
 header_image: https://cdn.suste.ch/img/nanke-assets/nanke-banner.jpg
 bio: 在这里，读懂南科
@@ -23,7 +23,7 @@ author_location:
 # Social Links
 social:
   weibo:
-  github:
+  github: https://github.com/nankeyilu
   twitter:
   facebook:
   telegram: https://t.me/nankeyilu
@@ -54,7 +54,7 @@ photoswipe: true
 # LazyLoad
 # home page has enabled, this value is to post page
 # https://github.com/dinbror/blazy
-lazyload: true
+lazyload: false
 
 # Local Search
 local_search: true
@@ -67,7 +67,7 @@ valine:
   verify: true # Verification code
   appId: 2YTtGBClfFU6JoO8D95qlCJq-MdYXbMMI # your leancloud application appid
   appKey: VCyC8V6cmFNCRzgPoD0K7vpt # your leancloud application appkey
-  placeholder: Just go go # comment box placeholder
+  placeholder: 想说点啥？ # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
   visitor: true # page view record
