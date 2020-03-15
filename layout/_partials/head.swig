@@ -64,7 +64,7 @@
 
 	<meta property="og:site_name" content="{{ config.title }}">
 	<meta property="og:type" content="{% if is_post() %}article{% else %}website{% endif %}">
-	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}">
+	<meta property="og:title" content="{% if is_home() %}首页 | {{ config.title }}{% elif title %}{{ title }}{% else %}{{ config.title }}{% endif %}">
 	<meta property="og:description" name="description" content="{% if is_post() %}{{ page.summary }}{% elif description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ full_url_for(config.blog_preview_image) }}{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
