@@ -11,7 +11,7 @@
             {% if is_home() and theme.blog_logo %}
             <img class="author-profile-image" src="{{ theme.blog_logo }}" alt="{{ title }}" />
             {% endif %}
-            <img class="site-title" src="{{ url_for('/images/blog-logo-6bit.png') }}" alt="{{ title }}" />
+            <img class="site-title" src="{{ url_for('/images/blog-logo.svg') }}" alt="{{ title }}" />
             <h2 class="site-description">{{ description }}</h2>
         </div>
         {# 首页, 导航栏在header底部 #}

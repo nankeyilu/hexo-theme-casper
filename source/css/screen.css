@@ -185,7 +185,7 @@ h6 {
 	flex-direction: column;
 
 	min-height: 200px;
-	max-height: 450px;
+/*	max-height: 450px;*/
 	padding: 10vw 4vw;
 
 	text-align: center;
@@ -198,11 +198,11 @@ h6 {
 }
 
 .site-title {
-	width: 420px;
+	width: 500px;
 
 	z-index: 10;
 
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	padding: 0;
 }
 

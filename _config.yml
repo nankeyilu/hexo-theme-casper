@@ -74,10 +74,10 @@ valine:
 
 # PWA
 # you need create a manifest.json file in hexo's source folder
-manifest: false
+manifest: true
 service_workers: false
 
-navColor: '57c5c1'
+navColor: '244c5a'
 
 # Baidu Push
 baidu: false

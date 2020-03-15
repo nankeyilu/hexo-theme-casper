@@ -44,10 +44,9 @@
 	{{ favicon_tag(theme.favicon) }}
 	<link rel="apple-touch-icon" href="{{ theme.favicon }}"/>
 	{% endif %}
-	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-64.png') }}" size="64x64">
-	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-32.png') }}" size="32x32">
 	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-16.png') }}" size="16x16">
-	<link rel="icon" type="image/x-icon" href="{{ url_for('/favicon.ico') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-32.png') }}" size="32x32">
+	<link rel="icon" type="image/png" href="{{ url_for('/images/favicon-64.png') }}" size="64x64">
 
 	{% if theme.navColor %}
 	<meta name="theme-color" content="#{{ theme.navColor }}">
@@ -55,8 +54,9 @@
 	{% endif %}
 
 	{% if theme.manifest %}
-	<link rel="manifest" href="{{ url_for('/manifest.json') }}">
+	<link rel="manifest" href="{{ url_for('/manifest.webmanifest') }}">
 	{% endif %}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('/images/iosicon-180px.png') }}">
 
 	{% if theme.rss %}
 	{{ feed_tag(theme.rss, [{title:config.title}])  }}
@@ -64,9 +64,9 @@
 
 	<meta property="og:site_name" content="{{ config.title }}">
 	<meta property="og:type" content="{% if is_post() %}article{% else %}website{% endif %}">
-	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}{% if is_home() %} | {{ config.subtitle }}{% endif %}">
+	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}">
 	<meta property="og:description" name="description" content="{% if is_post() %}{{ page.summary }}{% elif description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
-	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ config.blog_preview_image }}{% endif %}" />
+	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ full_url_for(config.blog_preview_image) }}{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
 
 	{% if is_post() %}

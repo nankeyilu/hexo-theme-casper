@@ -1,0 +1,17 @@
+{
+  "name": "南科一路 | 在这里，读懂南科",
+  "short_name": "南科一路",
+  "description": "以学生的视角，记录榕安国南科郡里那些举足轻重的小事",
+  "start_url": "/",
+  "theme_color": "#244c5a",
+  "background_color": "#F4F8FB",
+  "icons": [{
+    "src": "/images/favicon-64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  }, {
+    "src": "/images/favicon-200.png",
+    "sizes": "200x200",
+    "type": "image/png"
+  }]
+}
