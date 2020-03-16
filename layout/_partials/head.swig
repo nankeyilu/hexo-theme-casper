@@ -40,6 +40,11 @@
 	<meta name="keywords" content="{% if is_post() %}{{ page.keywords }}{% else %}{{ theme.keywords }}{% endif %}">
 	{% endif %}
 
+	{% if is_post() %}{% set description = page.summary %}{% endif %}
+	{% if description %}
+	<meta name="description" content="{{ description }}">
+	{% endif %}
+
 	{% if theme.favicon %}
 	{{ favicon_tag(theme.favicon) }}
 	<link rel="apple-touch-icon" href="{{ theme.favicon }}"/>
@@ -65,9 +70,10 @@
 	<meta property="og:site_name" content="{{ config.title }}">
 	<meta property="og:type" content="{% if is_post() %}article{% else %}website{% endif %}">
 	<meta property="og:title" content="{% if is_home() %}首页 | {{ config.title }}{% elif title %}{{ title }}{% else %}{{ config.title }}{% endif %}">
-	<meta property="og:description" name="description" content="{% if is_post() %}{{ page.summary }}{% elif description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
+	<meta property="og:description" content="{% if is_post() %}{{ page.summary }}{% elif description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}{{ full_url_for(config.blog_preview_image) }}{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
+	<link rel="canonical" href="{{ config.url }}{{ url_for(page.path) }}">
 
 	{% if is_post() %}
 	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/>
