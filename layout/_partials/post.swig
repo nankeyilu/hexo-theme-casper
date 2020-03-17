@@ -5,7 +5,7 @@
         <header class="post-full-header">
             <div class="post-full-meta">
                 <time  class="post-full-meta-date" datetime="{{ date_xml(page.date) }}">
-                    {{ date(page.date, 'YYYY-MM-D') }}
+                    {{ date(page.date, 'YYYY-MM-DD') }}
                 </time>
                 {% if page.categories %}
                 <span class="date-divider">/</span>
@@ -26,7 +26,7 @@
                     {{ page.content }}
                 </article>
                 <p class="post-ending">
-                    {{ date(page.date, 'YYYY-MM-D') }} / {{ page.author }}<br>
+                    {{ date(page.date, 'YYYY-MM-DD') }} / {{ page.author }}<br>
 					{% if theme.comment and theme.valine.visitor %}
 					<span id="{{ url_for(page.path) }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
 						<span>阅读量：</span>
