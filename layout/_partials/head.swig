@@ -22,7 +22,6 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="preconnect" href="//www.google-analytics.com">
 	{% if is_post() %}
 	<link rel="preload" href="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js" as="script">
 	<link rel="preconnect" href="//us.avoscloud.com">
@@ -91,13 +90,12 @@
 	{{ css('css/allinonecss.min') }}
 
 	{% if theme.googleAnalytics %}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '{{ theme.GA_TRACKING_ID }}');
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', '{{ theme.GA_TRACKING_ID }}', 'auto');
+	ga('send', 'pageview');
 	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
 	{% endif %}
 
 	{# {% include "public/json-ld.swig" %} #}
