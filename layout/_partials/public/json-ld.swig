@@ -45,6 +45,7 @@
 		"headline": "{{ config.title }}",
 		"dateModified": "{{ date_xml(Date.now()) }}",
 		"description": "{{ config.description }}",
+		"image": "{{ config.url+config.blog_preview_image }}",
 		"blogPost": [{% for post in page.posts %}{% if loop.index != 1 %},
 		{% endif %}{"@type":"BlogPosting",
 		"headline":"{{ post.title }}",
