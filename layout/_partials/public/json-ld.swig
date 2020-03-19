@@ -59,7 +59,7 @@
 		"url": "{{ config.url+theme.json_id_favicon }}"}},
 		"image": "{{ post.cover_img }}",
 		"mainEntityOfPage": "{{ post.permalink }}",
-		"articleBody": "{{ truncate(post.content | striptags,{length: 100}) }}"}{% endfor %}]
+		"articleBody": "{% if post.ld_json_summary %}{{ post.ld_json_summary+theme.ellipsis }}{% else %}{{ post.summary+theme.ellipsis }}{% endif %}"}{% endfor %}]
 	}
 </script>
 {% endif %}

@@ -86,3 +86,5 @@ baidu: false
 # Google Analytics
 googleAnalytics: true
 GA_TRACKING_ID: UA-160296007-1
+
+ellipsis: ...
