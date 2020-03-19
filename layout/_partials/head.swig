@@ -98,5 +98,5 @@
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
 	{% endif %}
 
-	{# {% include "public/json-ld.swig" %} #}
+	{% include "public/json-ld.swig" %}
 </head>

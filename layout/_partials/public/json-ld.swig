@@ -9,7 +9,7 @@
 		"datePublished": "{{ date_xml(page.date) }}",
 		"@id": "{{ page.permalink }}",
 		"author": {"@type": "Person",
-		"name": "{{ config.author }}"},
+		"name": "{{ page.author }}"},
 		"description": "{{ page.description }}",
 		"image": "{% if page.ld_json_img %}{{ page.ld_json_img }}{% else %}{{ page.cover_img }}{% endif %}"
 	},
@@ -51,11 +51,11 @@
 		"dateModified": "{{ date_xml(post.updated) }}",
 		"datePublished":"{{ date_xml(post.date) }}",
 		"author": {"@type": "Person",
-		"name": "{{ config.author }}"},
+		"name": "{{ post.author }}"},
 		"publisher": {"@type": "Organization",
 		"name": "{{ config.title }}",
 		"logo": {"@type": "ImageObject",
-		"url": "{{ config.url+theme.favicon }}"}},
+		"url": "{{ config.url+theme.json_id_favicon }}"}},
 		"image": "{{ post.cover_img }}",
 		"mainEntityOfPage": "{{ post.permalink }}",
 		"articleBody": "{{ truncate(post.content | striptags,{length: 100}) }}"}{% endfor %}]
