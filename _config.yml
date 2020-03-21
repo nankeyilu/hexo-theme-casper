@@ -55,7 +55,7 @@ photoswipe: true
 # LazyLoad
 # home page has enabled, this value is to post page
 # https://github.com/dinbror/blazy
-lazyload: false
+lazyload: true
 
 # Local Search
 local_search: true
