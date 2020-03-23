@@ -1,17 +1,79 @@
 {% if is_post() %}
 <link rel="canonical" href="{{ page.permalink }}"/>
 <script type="application/ld+json">
+{% if page.isnews %}
+[
+{
+	"@context": "https://schema.org",
+	"@type": "NewsArticle",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "{{ page.permalink }}"
+	},
+	"headline": "{{ page.title }}",
+	"image": "{% if page.ld_json_img %}{{ page.ld_json_img }}{% else %}{{ page.cover_img }}{% endif %}",
+	"datePublished": "{{ date_xml(page.date) }}",
+	"dateModified": "{% if page.date_updated %}{{ date_xml(page.date_updated) }}{% else %}{{ date_xml(page.date) }}{% endif %}",
+	"author": {
+		"@type": "Person",
+		"name": "{{ page.author }}"
+	},
+	 "publisher": {
+		"@type": "Organization",
+		"name": "南科一路 nanke.suste.ch",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://nanke.suste.ch/images/favicon-200.png"
+		}
+	},
+	"description": "{{ page.summary }}"
+},
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":
 	[
 	{
-		"@context": "http://schema.org",
-		"@type": "WebPage",
+		"@type": "ListItem",
+		"position": 1,
+		"name": "首页",
+		"item": "{{ config.url }}"
+	},
+	{
+		"@type": "ListItem",
+		"position": 2,
 		"name": "{{ page.title }}",
+		"item": "{{ page.permalink }}"
+	}
+	]
+}
+]
+{% else %}
+	[
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "{{ page.permalink }}"
+		},
+		"headline": "{{ page.title }}",
+		"image": "{% if page.ld_json_img %}{{ page.ld_json_img }}{% else %}{{ page.cover_img }}{% endif %}",
 		"datePublished": "{{ date_xml(page.date) }}",
-		"@id": "{{ page.permalink }}",
-		"author": {"@type": "Person",
-		"name": "{{ page.author }}"},
-		"description": "{{ page.description }}",
-		"image": "{% if page.ld_json_img %}{{ page.ld_json_img }}{% else %}{{ page.cover_img }}{% endif %}"
+		"dateModified": "{% if page.date_updated %}{{ date_xml(page.date_updated) }}{% else %}{{ date_xml(page.date) }}{% endif %}",
+		"author": {
+			"@type": "Person",
+			"name": "{{ page.author }}"
+		},
+		 "publisher": {
+			"@type": "Organization",
+			"name": "南科一路 nanke.suste.ch",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://nanke.suste.ch/images/favicon-200.png"
+			}
+		},
+		"description": "{{ page.summary }}"
 	},
 	{
 		"@context": "http://schema.org",
@@ -33,8 +95,8 @@
 		]
 	}
 	]
-</script>
 {% endif %}
+</script>
 
 {% if is_home() %}
 <script type="application/ld+json">
