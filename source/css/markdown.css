@@ -35,11 +35,22 @@ em {
 .markdown-body li {
     margin: .5em 0;
     padding-left: .3em;
-    line-height: 1.6em;
+    line-height: 1.6;
 }
 
 .markdown-body img {
     max-width: 100%;
+}
+
+.markdown-body p img:first-child {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.6em;
+}
+
+.image-caption {
+    color: #757575;
+    font-size: 0.8em;
 }
 
 .markdown-body span.light {
@@ -85,7 +96,7 @@ em {
 }
 
 .markdown-body p {
-    line-height: 1.6em;
+    line-height: 1.6;
     position: relative;
     z-index: 1;
     text-align: left;
@@ -157,7 +168,7 @@ em {
 
 .markdown-body>table td,
 .markdown-body>table th {
-    line-height: 1.5em;
+    line-height: 1.5;
     padding: 0.4em 0.8em;
     border: none;
     border: 1px solid #ddd;
