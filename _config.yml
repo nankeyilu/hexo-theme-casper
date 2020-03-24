@@ -55,7 +55,7 @@ photoswipe: true
 # LazyLoad
 # home page has enabled, this value is to post page
 # https://github.com/dinbror/blazy
-lazyload: true
+lazyload: false
 
 # Local Search
 local_search: true
@@ -68,7 +68,7 @@ valine:
   verify: true # Verification code
   appId: 2YTtGBClfFU6JoO8D95qlCJq-MdYXbMMI # your leancloud application appid
   appKey: VCyC8V6cmFNCRzgPoD0K7vpt # your leancloud application appkey
-  placeholder: 想说点啥？ # comment box placeholder
+  placeholder: 想说点啥？(提示：昵称，邮箱，网址均非必填项。您可以选择匿名评论，但请对自己的言论负责。) # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
   visitor: true # page view record
