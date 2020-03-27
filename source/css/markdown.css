@@ -99,6 +99,7 @@ em {
     position: relative;
     z-index: 1;
     text-align: left;
+    text-indent: 2em;
 }
 
 .markdown-body ul,
