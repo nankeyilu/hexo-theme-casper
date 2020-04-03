@@ -3,7 +3,7 @@ rss: /atom.xml           # link
 # favicon: /images/favicon.png # Hexo's favicon_tag lacks the flexibility to supply different sizes of favicon
 json_id_favicon: /images/favicon-200.png
 blog_logo:
-header_image: https://cdn.suste.ch/img/nanke-assets/nanke-banner.jpg
+header_image: https://cdn.nanke.suste.ch/img/nanke-assets/nanke-banner.jpg
 bio: 在这里，读懂南科
 post_toc: true
 
