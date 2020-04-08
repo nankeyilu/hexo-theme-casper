@@ -48,7 +48,7 @@
 						<div class="author-list">
 							<div class="author-list-item">
 								<div class="author-name-tooltip">{{ post.author }}</div>
-								{% if theme.author_image %}
+								{% if post.author_url %}
 								<a href="/about" class="static-avatar">
 									<img class="author-profile-image" src="{{ post.author_url }}" alt="{{ config.author }}" />
 								</a>
