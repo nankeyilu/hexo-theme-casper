@@ -980,6 +980,10 @@ h6 {
 	text-align: left;
 }
 
+li.category-list-item {
+	text-align: center;
+}
+
 .read-next-card-content li {
 	font-size: 1.6rem;
 	font-weight: 200;
