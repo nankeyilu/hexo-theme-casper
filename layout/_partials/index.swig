@@ -54,7 +54,7 @@
 								</a>
 								{% else %}
 								<a href="/about" class="static-avatar author-profile-image">
-									{% include "/images/favicon-200.png" %}
+								<img class="author-profile-image" src="/images/favicon-200.png" alt="{{ config.author }}" />
 								</a>
 								{% endif %}
 							</div>
