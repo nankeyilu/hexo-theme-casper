@@ -50,11 +50,11 @@
 								<div class="author-name-tooltip">{{ post.author }}</div>
 								{% if theme.author_image %}
 								<a href="/about" class="static-avatar">
-									<img class="author-profile-image" src="{{ theme.author_image }}" alt="{{ config.author }}" />
+									<img class="author-profile-image" src="{{ post.author_url }}" alt="{{ config.author }}" />
 								</a>
 								{% else %}
 								<a href="/about" class="static-avatar author-profile-image">
-									{% include "public/icons/avatar.svg" %}
+									{% include "/images/favicon-200.png" %}
 								</a>
 								{% endif %}
 							</div>
