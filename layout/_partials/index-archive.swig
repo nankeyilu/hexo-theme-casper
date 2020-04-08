@@ -4,7 +4,6 @@
 	<div class="inner">
 		<div class="post-feed">
 			{% for post in page.posts %}
-			{% if not post.noindex %}
 			<article class="post-card post {% if not post.cover_img %} no-image {% endif %}">
 				{% if post.cover_img %}
 				<a class="post-card-image-link" title="{{ post.title }}" href="{{ url_for(post.path) }}">
@@ -66,7 +65,6 @@
 					</footer>
 				</div>
 			</article>
-			{% endif %}
 			{% endfor %}
 		</div>
 	</div>

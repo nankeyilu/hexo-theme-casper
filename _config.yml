@@ -12,8 +12,12 @@ keywords: hexo, casper, ghost, theme
 
 # Menu
 menu:
-  ABOUT: /about
-  ARCHIVES: /archives
+  南科周末: /categories/南科周末
+  即时新闻: /categories/即时新闻
+  深度: /categories/深度
+  关于本站: /about
+  全部文章: /archives
+
   # you can add here
 
 # author

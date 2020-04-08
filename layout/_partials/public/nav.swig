@@ -1,5 +1,5 @@
 {# NAV 导航部分, 遍历主题配置文件中的 menu 生成 link #}
-<nav class="site-nav"> 
+<nav class="site-nav">
     <div class="site-nav-left">
         <ul class="nav">
             <li>
@@ -10,7 +10,7 @@
                 </a>
                 {% endif %}
                 {% else %}
-                <a href="{{ config.root }}" title="Home">HOME</a>
+                <a href="{{ config.root }}" title="主页">主页</a>
                 {% endif %}
             </li>
             {% if theme.menu %}
@@ -20,17 +20,17 @@
             </li>
             {% endfor %}
             {% endif %}
-        </ul> 
+        </ul>
     </div>
     {% if theme.local_search %}
     <div class="search-button-area">
         <a href="#search" class="search-button">Search ...</a>
     </div>
-    {% endif %} 
+    {% endif %}
     <div class="site-nav-right">
         {% if theme.local_search %}
         <a href="#search" class="search-button">Search ...</a>
-        {% endif %} 
+        {% endif %}
         {% include 'social.swig' %}
     </div>
 </nav>
