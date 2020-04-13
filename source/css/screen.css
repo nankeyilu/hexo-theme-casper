@@ -145,14 +145,14 @@ h6 {
 	padding-bottom: 12px;
 
 	color: var(--white-normal);
-	background: #090A0B no-repeat 50%;
+	background: #090A0B no-repeat center; /* theme color set in HTML will override if banner is present */
 	background-size: cover;
 }
 
 .site-header:before {
 	bottom: 0;
 
-	background: rgba(0, 0, 0, .18);
+	background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.9));
 }
 
 .site-header:after,
