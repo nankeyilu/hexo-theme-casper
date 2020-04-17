@@ -13,7 +13,7 @@
     <ul>
       {% set recent = site.posts.sort('date', -1) %}
       {% for post in recent %}
-      {% if loop.key < 3 %}
+      {% if loop.key < 4 %}
       <li>
         <a href="{{ url_for(post.path) }}">{{ post.title }}</a>
       </li>
