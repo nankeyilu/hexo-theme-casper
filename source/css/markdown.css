@@ -144,12 +144,13 @@ em {
     border-left: 4px solid #26A8ED;
 }
 
+/*
 .markdown-body blockquote p {
-    font-weight: 600;
     margin-left: 0;
     margin-bottom: 0;
     padding-bottom: 0;
 }
+*/
 
 .markdown-body iframe {
     margin: 1em 0;
