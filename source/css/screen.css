@@ -406,6 +406,9 @@ h6 {
 	.site-nav-right {
 		display: none;
 	}
+	.tags-postTags .social-links {
+    		display: inline-flex !important;
+    	}
 }
 
 .post-feed {

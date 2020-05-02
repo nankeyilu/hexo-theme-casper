@@ -40,6 +40,7 @@
                         <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
                     </li>
                     {% endfor %}
+                    {% include 'public/social.swig' %}
                 </ul>
             </div>
         </div>

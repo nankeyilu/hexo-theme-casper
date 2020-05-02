@@ -88,6 +88,19 @@ img {
     color: var(--link-color-hover);
 }
 
+.tags-postTags .social-links {
+    display: none;
+    float: right;
+}
+
+.tags-postTags .social-link svg {
+    fill: currentColor;
+}
+
+.tags-postTags .social-links a:last-of-type {
+    padding-right: 0;
+}
+
 .hide {
     display: none;
 }
