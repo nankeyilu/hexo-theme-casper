@@ -8,12 +8,12 @@
 	"@type": "NewsArticle",
 	"mainEntityOfPage": {
 		"@type": "WebPage",
-		"@id": "{{ page.permalink }}"
+		"@id": "urn:uuid:{{ page.uuid }}"
 	},
 	"headline": "{{ page.title }}",
 	"image": "{% if page.ld_json_img %}{{ page.ld_json_img }}{% else %}{{ page.cover_img }}{% endif %}",
 	"datePublished": "{{ date_xml(page.date) }}",
-	"dateModified": "{% if page.date_updated %}{{ date_xml(page.date_updated) }}{% else %}{{ date_xml(page.date) }}{% endif %}",
+	"dateModified": "{% if page.updated %}{{ date_xml(page.updated) }}{% else %}{{ date_xml(page.date) }}{% endif %}",
 	"author": {
 		"@type": "Person",
 		"name": "{{ page.author }}"
