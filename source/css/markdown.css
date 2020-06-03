@@ -253,3 +253,19 @@ em {
     content: "\2713";
     background-color: #42b983;
 }
+
+.credibility-tag {
+    width: 25%;
+    min-width: 200px;
+    line-height: 1;
+    margin: 0.5em auto;
+}
+
+.credibility-tag picture {
+    width: 100%;
+}
+
+.credibility-tag img {
+    display: inline;
+    margin: 0;
+}
