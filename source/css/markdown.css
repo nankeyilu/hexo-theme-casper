@@ -85,7 +85,7 @@ em {
 .markdown-body h5,
 .markdown-body strong {
     margin-bottom: 1em;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-2);
     margin-top: 1.5em
 }
@@ -116,7 +116,7 @@ em {
 
 .markdown-body a {
     color: #26A8ED;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .markdown-body a.button {
