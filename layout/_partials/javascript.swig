@@ -61,7 +61,7 @@
 
 {# Valine 评论 #}
 {% if is_post() and theme.comment %}
-<script id="valineScript" src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' async></script>
+<script id="valineScript" src='//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js' async></script>
 <script>
     document.getElementById('valineScript').addEventListener("load", function() {
         new Valine({
@@ -73,7 +73,8 @@
             placeholder: '{{ theme.valine.placeholder }}',
             pageSize: {{ theme.valine.pageSize }},
             avatar: '{{ theme.valine.avatar }}',
-            visitor: {{ theme.valine.visitor }}
+            visitor: {{ theme.valine.visitor }},
+            serverURLs: {{ theme.valine.visitor }}
         })
     });
 </script>

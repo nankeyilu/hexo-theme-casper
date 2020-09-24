@@ -76,6 +76,7 @@ valine:
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
   visitor: true # page view record
+  serverURLs: https://2yttgbcl.api.lncldglobal.com
 
 # PWA
 # you need create a manifest.json file in hexo's source folder
