@@ -88,12 +88,14 @@
 	{{ css('css/allinonecss.min') }}
 
 	{% if theme.googleAnalytics %}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>
 	<script>
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', '{{ theme.GA_TRACKING_ID }}', 'auto');
-	ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ theme.GA_TRACKING_ID }}');
 	</script>
-	<script async src='https://www.google-analytics.com/analytics.js'></script>
 	{% endif %}
 
 	{% include "public/json-ld.swig" %}
