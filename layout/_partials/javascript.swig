@@ -61,20 +61,21 @@
 
 {# Valine 评论 #}
 {% if is_post() and theme.comment %}
-<script id="valineScript" src='//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js' async></script>
+<script id="valineScript" src='//cdn.jsdelivr.net/npm/minivaline@5/dist/MiniValine.min.js' async></script>
 <script>
     document.getElementById('valineScript').addEventListener("load", function() {
-        new Valine({
+        new MiniValine({
+            backend: 'waline',
             el: '#comment' ,
-            verify: {{ theme.valine.verify }},
-            notify: {{ theme.valine.notify }},
-            appId: '{{ theme.valine.appId }}',
-            appKey: '{{ theme.valine.appKey }}',
+            serverURL: '{{ theme.valine.walineURL }}',
+            md: true,
+            closeMarkdownStyle: true,
+            dark: true,
             placeholder: '{{ theme.valine.placeholder }}',
             pageSize: {{ theme.valine.pageSize }},
-            avatar: '{{ theme.valine.avatar }}',
-            visitor: {{ theme.valine.visitor }},
-            serverURLs: {{ theme.valine.visitor }}
+            avatarD: '{{ theme.valine.avatar }}',
+            avatarUrl: '{{ theme.valine.avatarURL }}',
+            visitor: {{ theme.valine.visitor }}
         })
     });
 </script>

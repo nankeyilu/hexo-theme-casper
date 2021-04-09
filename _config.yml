@@ -65,18 +65,15 @@ lazyload: false
 local_search: true
 
 # Comment
-# https://valine.js.org
+# https://minivaline.js.org
 comment: true
 valine:
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: true # Verification code
-  appId: 2YTtGBClfFU6JoO8D95qlCJq-MdYXbMMI # your leancloud application appid
-  appKey: VCyC8V6cmFNCRzgPoD0K7vpt # your leancloud application appkey
+  walineURL: https://nk-comment-b.vercel.app
   placeholder: 想说点啥？(提示：昵称，邮箱，网址均非必填项。您可以选择匿名评论，但请对自己的言论负责。) # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
+  avatarURL: https://gravatar.loli.net/avatar
   visitor: true # page view record
-  serverURLs: https://2yttgbcl.api.lncldglobal.com
 
 # PWA
 # you need create a manifest.json file in hexo's source folder

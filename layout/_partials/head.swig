@@ -22,8 +22,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	{% if is_post() %}
-	<link rel="preload" href="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js" as="script">
+	{% if is_post() and theme.comment %}
+	<link rel="preload" href="//cdn.jsdelivr.net/npm/minivaline@5/dist/MiniValine.min.js" as="script">
+	<link rel="preconnect" href="{{ theme.valine.walineURL }}">
 	<link rel="dns-prefetch" href="//gravatar.loli.net">
 	{% endif %}
 
