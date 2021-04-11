@@ -61,7 +61,7 @@
 
 {# Valine 评论 #}
 {% if is_post() and theme.comment %}
-<script id="valineScript" src='//cdn.jsdelivr.net/npm/minivaline@5/dist/MiniValine.min.js' async></script>
+<script id="valineScript" src='//cdn.jsdelivr.net/gh/nankeyilu/MiniValine@5.1.7.2/dist/MiniValine.min.js' async></script>
 <script>
     document.getElementById('valineScript').addEventListener("load", function() {
         new MiniValine({
